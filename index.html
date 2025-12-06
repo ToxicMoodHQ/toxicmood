@@ -32,29 +32,47 @@
 
     form {
       margin-top: 30px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    label {
+      font-size: 1.1rem;
+      margin-bottom: 10px;
     }
 
     input[type="email"] {
-      padding: 10px;
-      width: 250px;
+      padding: 12px;
+      width: 100%;
+      max-width: 320px;
       border: none;
-      border-radius: 4px;
+      border-radius: 6px;
+      font-size: 1rem;
     }
 
     input[type="submit"] {
-      padding: 10px 20px;
-      margin-left: 10px;
+      margin-top: 15px;
+      padding: 12px 28px;
       background-color: #f1c40f;
       color: black;
+      font-size: 1rem;
+      font-weight: bold;
       border: none;
-      border-radius: 4px;
+      border-radius: 6px;
       cursor: pointer;
+      transition: background-color 0.2s ease;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #ddb500;
     }
 
     .confirmation {
       margin-top: 20px;
       color: #9eff9e;
       font-weight: bold;
+      font-size: 1rem;
     }
   </style>
 </head>
@@ -63,8 +81,8 @@
     <img src="landing-page-image.png" alt="ToxicMood landing image" />
 
     <form id="subscribe-form">
-      <label for="bd-email">⚠️ Get Containment Reports</label><br /><br />
-      <input type="email" name="email" id="bd-email" required placeholder="your@email.com" /><br /><br />
+      <label for="bd-email">⚠️ Get Containment Reports</label>
+      <input type="email" name="email" id="bd-email" required placeholder="your@email.com" />
       <input type="submit" value="Subscribe" />
     </form>
 
